@@ -5,11 +5,11 @@
     'description' :"""
         Academia de Cursos
     """,
-    'author' : 'David Miguel Garibay Rivera. Crucialsoft',
-    'website': 'http://www.crucialsoft.com.mx'
+    'author' : 'David Miguel Garibay Rivera. Crucialsoft.',
+    'website': 'http://www.crucialsoft.com.mx',
     'category' : 'Training',
     'version' : '0.0.1',
-    'depends' : ['base']
+    'depends' : ['base'],
     'data' : [
         
     ],
