@@ -3,18 +3,13 @@
     'name' : 'odoo Academy',
     'summary' : """Academy app training""",
     'description' :"""
-        Academia de Cursos
+        Academy curses
     """,
-    'author' : 'David Miguel Garibay Rivera. Crucialsoft.',
-    'website': 'http://www.crucialsoft.com.mx',
+    'author' : 'crucialsoft',
     'category' : 'Training',
     'version' : '0.0.1',
     'depends' : ['base'],
-    'data' : [
-        
-    ],
     'demo': [
-        
+        'demo/academy_demo.xml',
     ],
-
 }
