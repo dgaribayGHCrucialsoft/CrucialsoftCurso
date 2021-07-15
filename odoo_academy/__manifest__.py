@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 {
     'name' : 'odoo Academy',
-    'summary' : """Academy app training""",
+    'summary' : """Academia. Aplicaciónde entranamiento""",
     'description' :"""
-        Academy curses
+        Academia de cursos
     """,
-    'author' : 'crucialsoft',
+    'author' : 'Crucialsoft. David Miguel Garibay Rivera.',
     'category' : 'Training',
     'version' : '0.0.1',
     'depends' : ['base'],
@@ -13,6 +13,7 @@
         'security/academy_security.xml',
         'security/ir.model.access.csv',
         'views/course_views.xml',
+        'views/academy_menuitems.xml',
     ],
     'demo': [
         'demo/academy_demo.xml',
