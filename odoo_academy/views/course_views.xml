@@ -8,7 +8,7 @@
       <field name="arch" type="xml">
         <form string="Ventana del Curso">
 		    <sheet>
-			    <h1><field name="name"/></h1>
+			    <h1><field name="name" placeholder="Favor de capturar el título del curso"/></h1>
 				<group>
 				    <group>
 					    <field name="active"/>
@@ -17,7 +17,7 @@
 				</group>
 				<notebook>
 				    <page string="Descripción">
-					    <field name="description"/>
+					    <field name="description" placeholder="Favor de capturar la descripción del curso"/>
 					</page>
 				</notebook>
 			</sheet>
