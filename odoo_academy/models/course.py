@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from odoo.exceptions import UserError, ValidationError
 
 class Course(models.Model):
 
@@ -17,3 +18,19 @@ class Course(models.Model):
                              copy=False)
 							 
     active = fields.Boolean(string='Activo', default=True)
+
+    base_price=fields.Float(string="Precio base", default=0.00)
+    additional_fee=fields.Float(string="Cuota adicional", default=10.00)
+    total_price=fields.Float(string="Precio total", readonly=True)
+
+    @api.onchange('base_price', 'additional_fee')
+    def _onchange_total_price(self):
+        if self.base_price<0.00:
+            raise UserError('El precio base no puede ser negativo')
+        self.total_price = self.base_price + self.additional_fee
+
+    @api.constrains('additional_fee')
+    def _check_additional_fee(self):
+        for record in self:
+            if record.additional_fee<10.00:
+                raise ValidationError('La cuota adicional no puede ser menor a 10.00: %s'% record.additional_fee)
