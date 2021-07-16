@@ -23,6 +23,13 @@ class Course(models.Model):
     additional_fee=fields.Float(string="Cuota adicional", default=10.00)
     total_price=fields.Float(string="Precio total", readonly=True)
 
+    foto=fields.Image(string='Fotografía de la Obra')
+    archivo=fields.Binary(string='Archivo adjunto')
+
+    session_ids=fields.One2many(comodel_name='academy.session',
+                                inverse_name='course_id',
+                                string='Sesiones')
+
     @api.onchange('base_price', 'additional_fee')
     def _onchange_total_price(self):
         if self.base_price<0.00:
