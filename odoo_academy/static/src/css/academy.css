@@ -1,0 +1,8 @@
+.image_course_list > img { 
+    height: 90px; 
+    width: 90px;
+}
+.course_image_widget > img { 
+    height: 250px; 
+    width: 250px;
+}
