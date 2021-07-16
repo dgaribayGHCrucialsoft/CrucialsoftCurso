@@ -19,10 +19,19 @@
                         <field name="additional_fee"/>
                         <field name="total_price" force_save="1"/>
                     </group>
+                    <group>
+					    <field name="foto" widget="image" class="course_image_widget"/>
+				    </group>
+                    <group>
+					    <field name="archivo" widget="file"/>
+				    </group>
 				</group>
 				<notebook>
 				    <page string="Descripción">
 					    <field name="description" placeholder="Favor de capturar la descripción del curso"/>
+					</page>
+                    <page string="Sesiones">
+					    <field name="session_ids"/>
 					</page>
 				</notebook>
 			</sheet>
@@ -36,6 +45,8 @@
 		<field name="model">academy.course</field>
 		<field name="arch" type="xml">
 		    <tree string="Lista de Cursos">
+                <field name="foto" widget="image" class="image_course_list"/>
+                <field name="archivo" widget="file"/>
 			    <field name="name"/>
 				<field name="description"/>
 				<field name="level"/>
