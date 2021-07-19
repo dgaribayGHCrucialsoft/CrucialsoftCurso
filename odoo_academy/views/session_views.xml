@@ -46,7 +46,7 @@
 		<field name="name">academy.session.calendar</field>
 		<field name="model">academy.session</field>
 		<field name="arch" type="xml">
-			<calensar string="Calendario de Sesiones"
+			<calendar string="Calendario de Sesiones"
 				date_start="start_date"
 				date_stop="end_date"
 				color="instructor_id"
