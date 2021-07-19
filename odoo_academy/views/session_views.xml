@@ -42,10 +42,10 @@
 		</field>
 	</record>
 
-	<record model="ir.ui.view" id="sesion_view_calendar">
+	<record model="ir.ui.view" id="session_view_calendar">
 		<field name="name">academy.session.calendar</field>
-		<field name="model">academy.session.calendar</field>
-		<field name="arch">academy.session.calendar</field>
+		<field name="model">academy.session</field>
+		<field name="arch" type="xml">
 			<calensar string="Calendario de Sesiones"
 				date_start="start_date"
 				date_stop="end_date"
