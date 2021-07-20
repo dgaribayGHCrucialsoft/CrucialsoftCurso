@@ -61,10 +61,34 @@
 		<field name="name">academy.session.gantt</field>
 		<field name="model">academy.session</field>
 		<field name="arch" type="xml">
-			<gantt color="instructor_id" date_delay="duration" date_start="start_date" string="Dias de la sesión">
-				<level object="academy.session" link="course_id" domain="[]">
-					<field name="name"/>
-				</level>
+			<gantt 
+				date_start="start_date"
+				date_stop="end_date"
+				default_group_by="course_id"
+				default_scale="month"
+				color="instructor_id"
+				scales="day,week,month,year"
+				precision="{'day': 'hour:full', 'week': 'day:full', 'month': 'day:full', 'year': 'day:full'}"
+			   >
+					<field name="course_id"/>
+					<templates>
+               <div t-name="gantt-popover" class="container-fluid">
+                   <div class="row no-gutters">
+                       <div class="col">
+                           <ul class="pl-1 mb-0">
+                               <li>
+                                   <strong>Start Date:</strong>
+                                   <t t-esc="userTimezoneStartDate.format('YYYY-MM-DD hh:mm:ss A')"/>
+                               </li>
+                               <li>
+                                   <strong>Stop Date:</strong>
+                                   <t t-esc="end_date.format('YYYY-MM-DD hh:mm:ss A')"/>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </templates>
 			</gantt>
 		</field>
 	</record>
