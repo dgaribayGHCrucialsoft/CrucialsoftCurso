@@ -72,23 +72,23 @@
 			   >
 					<field name="course_id"/>
 					<templates>
-               <div t-name="gantt-popover" class="container-fluid">
-                   <div class="row no-gutters">
-                       <div class="col">
-                           <ul class="pl-1 mb-0">
-                               <li>
-                                   <strong>Start Date:</strong>
-                                   <t t-esc="userTimezoneStartDate.format('YYYY-MM-DD hh:mm:ss A')"/>
-                               </li>
-                               <li>
-                                   <strong>Stop Date:</strong>
-                                   <t t-esc="end_date.format('YYYY-MM-DD hh:mm:ss A')"/>
-                               </li>
-                           </ul>
-                       </div>
-                   </div>
-               </div>
-           </templates>
+						<div t-name="gantt-popover" class="container-fluid">
+							<div class="row no-gutters">
+								<div class="col">
+									<ul class="pl-1 mb-0">
+										<li>
+											<strong>Fecha inicial:</strong>
+											<t t-esc="userTimezoneStartDate.format('YYYY-MM-DD hh:mm:ss A')"/>
+										</li>
+										<li>
+											<strong>Fecha final:</strong>
+											<t t-esc="end_date.format('YYYY-MM-DD hh:mm:ss A')"/>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</templates>
 			</gantt>
 		</field>
 	</record>
