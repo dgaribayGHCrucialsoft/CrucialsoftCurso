@@ -129,6 +129,22 @@
         <cohort string="Cohort records" date_start="start_date" date_stop="end_date" interval="day" mode="churn"/>
       </field>
     </record>
+	
+	<record id="view_activity_example" model="ir.ui.view">
+		<field name="name">academy.session.activity</field>
+		<field name="model">academy.session</field>
+		<field name="arch" type="xml">
+			<activity string="Sesiones">
+				<templates>
+					<div t-name="activity-box">
+						<div>
+							<field name="name"/>
+						</div>
+					</div>
+				</templates>
+			</activity>
+		</field>
+	</record>
 
   </data>
 </odoo>
