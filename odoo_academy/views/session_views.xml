@@ -120,7 +120,15 @@
                     </templates>
                 </kanban>
             </field>
-        </record>
+    </record>
+	
+	<record id="view_cohort_cohort" model="ir.ui.view">
+      <field name="name">academy.session.cohort</field>
+      <field name="model">academy.session</field>
+      <field name="arch" type="xml">
+        <cohort string="Cohort records" date_start="start_date" date_stop="end_date" interval="day" mode="churn"/>
+      </field>
+    </record>
 
   </data>
 </odoo>
