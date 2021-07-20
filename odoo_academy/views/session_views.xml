@@ -56,6 +56,18 @@
 			</calendar>
 		</field>
 	</record>
+	
+	<record model="ir.ui.view" id="session_view_gantt">
+		<field name="name">academy.session.gantt</field>
+		<field name="model">academy.session</field>
+		<field name="arch" type="xml">
+			<gantt color="instructor_id" date_delay="duration" date_start="start_date" string="Dias de la sesión">
+				<level object="academy.session" link="course_id" domain="[]">
+					<field name="name"/>
+				</level>
+			</gantt>
+		</field>
+	</record>
 
   </data>
 </odoo>
