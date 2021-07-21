@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+		<!-- Vista de herencia -->
+		<record model="ir.ui.view" id="academy_sale_wizard_form_view">
+			<field name="name">academy.sale.wizard.form</field>
+			<field name="model">academy.sale.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Genera orden de venta para una sesión">
+					<group>
+						<field name="session_id"/>
+						<field name="session_student_ids" invisible="1"/>
+						<field name="student_ids" domain="[('id','in',session_student_ids)]"/>
+					</group>
+					<footer>
+						<button name="create_sale_orders" type="object" string="Generar" class="oe_highlight"/>
+						or
+						<button special="cancel" string="Cancelar"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+		
+		<act_window id="launch_sale_wizard"
+					name="Generar orden de venta"
+					binding_model="academy.session"
+					res_model="academy.sale.wizard"
+					view_mode="form"
+					target="new"
+					/>
+
+  </data>
+</odoo>
