@@ -8,7 +8,7 @@
     'author' : 'Crucialsoft. David Miguel Garibay Rivera.',
     'category' : 'Training',
     'version' : '0.0.1',
-    'depends' : ['base','web_cohort'],
+    'depends' : ['base','web_cohort','sale'],
     'data' : [
         'security/academy_security.xml',
         'security/ir.model.access.csv',
@@ -16,6 +16,7 @@
         'views/academy_menuitems.xml',
         'views/css_loader.xml',
         'views/session_views.xml',
+        'views/sale_views_inherit.xml',
     ],
     'demo': [
         'demo/academy_demo.xml',
