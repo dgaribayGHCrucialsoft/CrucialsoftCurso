@@ -19,3 +19,4 @@ class Academy(http.Controller):
         return http.request.render('odoo_academy.session_website', {
             'session':session,
         })
+
