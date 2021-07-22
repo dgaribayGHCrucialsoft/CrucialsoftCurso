@@ -32,7 +32,7 @@
 							</div>
 						</div>
 						<h4>Estudiantes</h4>
-						<table>
+						<table class="table table-sm o_main_table">
 							<thead>
 								<tr>
 									<th name="th_name">Nombre</th>
