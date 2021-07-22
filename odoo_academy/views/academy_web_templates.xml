@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Datos de los cursos -->
+	<data>
+		<template id="course_website">
+			<t t-call="website.layout">
+				<t t-set="title">Academia Odoo</t>
+				<div class="oe_structure">
+					<div class="container">
+						<h1>Cursos de la Academia Odoo</h1>
+						<t t-foreach="courses" t-as="course">
+							<h3>
+								<t t-esc="course.id"/>
+								<t t-esc="course.name"/>
+							</h3>
+							<p>Descripción: <span t-field="course.description"></p>
+							
+							<p>Nivel: <span t-field="course.level"></p>
+							
+							<strong>Lista de sesiones</strong>
+							<t t-foreach="course.session_ids" t-as="session">
+								<p>
+									<a t-attf-href="/academy/{{ slug(session)}}">
+										<t t-esc="session.name"/>
+									</a>
+								</p>
+								<p>Última modificación: 
+									<i t-field="session.write_date" t-field-options='{"format":"long"}'/>
+								</p>
+							</t>
+							<t t-if="not course.session_ids">
+								<p>No existen sesiones para este curso</p>
+							</t>
+						</t>
+					</div>
+				</div>
+			</t>
+		</template>
+		
+		<template id="session_website">
+			<t t-call="website.layout">
+				<t t-set="title">Sesión</t>
+				<div class="oe_structure">
+					<div class="container">
+						<h3 t-field="session.name"/>
+						<p>Última modificación: <i t-field="session.write_date" t-field-options='{"format":"long"}'/></p>
+						
+						<p>Curso: <t t-esc="session.course_id.name"/></p>
+						
+						<h3>Estudiantes:</h3>
+						<ul>
+							<t t-foreach="session.student_ids" t-as="student">
+								<li>
+									<span t-field="student.name"/>
+								</li>
+							</t>
+						</ul>
+					</div>
+				</div>
+			</t>
+		</template>
+	</data>
+</odoo>
