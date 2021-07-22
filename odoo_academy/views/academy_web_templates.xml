@@ -13,9 +13,9 @@
 								<t t-esc="course.id"/>
 								<t t-esc="course.name"/>
 							</h3>
-							<p>Descripción: <span t-field="course.description"></p>
+							<p>Descripción: <span t-field="course.description"/></p>
 							
-							<p>Nivel: <span t-field="course.level"></p>
+							<p>Nivel: <span t-field="course.level"/></p>
 							
 							<strong>Lista de sesiones</strong>
 							<t t-foreach="course.session_ids" t-as="session">
