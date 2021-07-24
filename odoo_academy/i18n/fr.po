@@ -323,7 +323,7 @@ msgstr ""
 #: code:addons/odoo_academy/models/course.py:0
 #, python-format
 msgid "La cuota adicional no puede ser menor a 10.00: %s"
-msgstr "Aditional cuote can't less than 10.00: %s........................"
+msgstr "Aditional cuote can't less than 10.00........................"
 
 #. module: odoo_academy
 #: model:ir.model.fields,field_description:odoo_academy.field_academy_course____last_update
