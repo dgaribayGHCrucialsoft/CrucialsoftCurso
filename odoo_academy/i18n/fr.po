@@ -135,7 +135,7 @@ msgstr ""
 #. module: odoo_academy
 #: model:ir.model.fields,field_description:odoo_academy.field_academy_course__additional_fee
 msgid "Cuota adicional"
-msgstr ""
+msgstr "Aditional cuote"
 
 #. module: odoo_academy
 #: model:ir.model.fields,field_description:odoo_academy.field_academy_session__course_id
@@ -391,7 +391,7 @@ msgstr ""
 #. module: odoo_academy
 #: model:ir.model.fields,field_description:odoo_academy.field_academy_course__base_price
 msgid "Precio base"
-msgstr ""
+msgstr "Base price"
 
 #. module: odoo_academy
 #: model:ir.model.fields,field_description:odoo_academy.field_academy_course__total_price
