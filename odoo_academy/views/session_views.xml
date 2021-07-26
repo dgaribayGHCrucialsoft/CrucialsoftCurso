@@ -42,6 +42,7 @@
 		</field>
 	</record>
 
+	<!-- Vista de calendario -->
 	<record model="ir.ui.view" id="session_view_calendar">
 		<field name="name">academy.session.calendar</field>
 		<field name="model">academy.session</field>
