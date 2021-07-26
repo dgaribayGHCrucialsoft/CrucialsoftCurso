@@ -37,7 +37,7 @@
 			<field name="res_model">academy.sale.wizard</field>
 			<field name="view_mode">form</field>
 			<field name="target">new</field>
-			<field name="binding_model_id">academy.session</field>
+			<field name="binding_model_id">academy.model_academy_session</field>
 		</record>
 
   </data>
