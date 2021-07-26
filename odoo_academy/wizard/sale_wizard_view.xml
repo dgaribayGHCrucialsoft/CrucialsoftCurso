@@ -21,7 +21,7 @@
 			</field>
 		</record>
 		
-		<!--  Generación de orden de venta. Original  
+		<!--  Generación de orden de venta. Original  -->
 		<act_window id="launch_sale_wizard"
 					name="Generar orden de venta"
 					binding_model="academy.session"
@@ -29,9 +29,9 @@
 					view_mode="form"
 					target="new"
 					/>
-		-->
 		
 		<!--  Generación de orden de venta. Se reemplaza por: -->
+		<!--
 		<record model="ir.actions.act_window" id="academy_sale_wizard_form_view">
 			<field name="name">Generar orden de venta</field>
 			<field name="res_model">academy.sale.wizard</field>
@@ -39,6 +39,7 @@
 			<field name="target">new</field>
 			<field name="binding_model_id" ref="model_academy_session"/>
 		</record>
+		-->
 
   </data>
 </odoo>
